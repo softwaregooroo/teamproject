@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -27,9 +27,7 @@ const Login = () => {
       if (response.ok) {
         // Handle successful login (e.g., store token, redirect)
         const data = await response.json();
-        // Store token in local storage (securely)
         localStorage.setItem('token', data.token); 
-        // Redirect to the protected area
         window.location.href = '/dashboard'; // Replace with your desired route
       } else {
         setErrorMessage('Invalid username or password.');
@@ -43,11 +41,10 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      
       {errorMessage && <div className="error">{errorMessage}</div>}
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username" style={{fontSize:"20px"}}>Username:</label>
+          <label htmlFor="username">Username:</label>
           <input 
             type="text" 
             id="username" 
@@ -56,7 +53,7 @@ const Login = () => {
           />
         </div>
         <div>
-          <label htmlFor="password" style={{fontSize:"20px"}} >Password:</label>
+          <label htmlFor="password">Password:</label>
           <input 
             type="password" 
             id="password" 
@@ -66,6 +63,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
+      <p>New User? <Link to="/signup">Sign Up</Link></p> 
     </div>
   );
 };
