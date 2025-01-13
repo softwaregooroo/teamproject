@@ -28,4 +28,4 @@ async function run() {
 run().catch(console.dir);
 
 
-mongodb+srv://nitrd122:Test@1234@cluster0.klnnn.mongodb.net/
+mongodb+srv://nitrd122:HVaA7r5eZU62e07n@cluster0.klnnn.mongodb.net/
