@@ -8,13 +8,13 @@ import Dashboard from './component/dashboard/dashboard.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/dashboard",
     element: <Dashboard />,
     
   },
    
   {
-      path: "/signup",
+      path: "/",
       element: <Signup />,
   },
   {

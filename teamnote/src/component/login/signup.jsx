@@ -24,7 +24,7 @@ const Signup = () => {
 
     try {
       // Replace with your actual API call
-      const response = await fetch('/api/signup', {
+      const response = await fetch('http://localhost:3000/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
