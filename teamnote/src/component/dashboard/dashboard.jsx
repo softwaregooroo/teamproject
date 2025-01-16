@@ -23,7 +23,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className='boxall'>
         <div class='topbar'><div className="search-bar">
           <input 
             type="text" 
@@ -52,8 +52,7 @@ function App() {
           ))}
         </ul>
       </div>
-      <div className="content">
-        </div>
+      
         {activeBlock && (
           <div>
             <h3>{blocks.find((block) => block.id === activeBlock).title}</h3>
